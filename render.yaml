@@ -1,0 +1,9 @@
+services:
+- type: worker
+  name: mybot
+  runtime: python
+  buildCommand: pip install -U -r requirements.txt
+  startCommand: python c.py
+  envVars:
+  - key: BOT_TOKEN
+    sync: false
